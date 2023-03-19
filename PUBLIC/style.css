@@ -1,0 +1,286 @@
+@font-face {
+    font-family: "MerchantCopy";
+    src: url("/fonts/MerchantCopy-GOXq") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #1f1f1f;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(121, 144, 155, 0.3);
+    /* border-radius: 5px; */
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        #1d5c4b 0%,
+        #1d5c4b 40%,
+        #383838 130px,
+        #383838 100%
+    );
+    font-family: "Open Sans", sans-serif;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    align-items: center;
+    max-height: 800px;
+    margin: auto;
+}
+
+.chat-container {
+    width: 900px;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+    background-color: #383838;
+    padding: 15px;
+    gap: 0.5em;
+}
+header img {
+    height: auto;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 50px;
+}
+
+header .chat-title {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 0.4em;
+}
+
+header .chat-title p {
+    padding: 0;
+    margin: 0;
+    color: #29f516;
+    font-weight: 150;
+    font-size: 0.7rem;
+}
+
+header .chat-title h3 {
+    padding: 0;
+    margin: 0;
+    font-weight: 150;
+    color: #ffff;
+}
+
+.chat-window {
+    width: 100%;
+    /* max-height: 800px; */
+    height: 480px;
+    background-image: url("/images/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 15px;
+    position: relative;
+    font-size: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.chat-message {
+    word-wrap: break-word;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 7px 10px;
+    gap: 0.5em;
+    color: #e9eae9;
+    justify-content: space-between;
+    position: relative;
+}
+
+.chat-message span {
+    font-size: 0.7rem;
+    text-align: end;
+}
+
+.chat-message p {
+    position: relative;
+    padding: 0;
+    font-weight: 50;
+}
+
+.user {
+    background-color: #1d5c4b;
+    border-radius: 10px 0px 10px 10px;
+    margin: 10px 0 5px auto;
+}
+
+.bot {
+    background-color: #383838;
+    border-radius: 0px 10px 10px 10px;
+    margin: 10px 0;
+}
+
+.chat-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    background-color: #1f1f1f;
+    padding: 15px;
+    justify-content: space-between;
+    overflow: hidden;
+    bottom: 0;
+    /* border-radius: 50px; */
+    /* position: absolute; */
+}
+
+.chat-form input {
+    width: calc(100% - 70px);
+    height: 100%;
+    padding: 0 15px;
+    background-color: #1f1f1f;
+    /* border-radius: 50px; */
+    color: #fff;
+    font-size: 0.85em;
+}
+
+.send-btn {
+    width: 60px;
+    height: 60px;
+    /* padding: 5px; */
+    background-color: transparent;
+    /* border-radius: 50px; */
+    overflow: hidden;
+    position: relative;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.send-btn:active {
+    transform: scale(0.85);
+}
+
+.send-btn img {
+    width: 100%;
+    height: 100%;
+}
+.table {
+    border: solid 1 #000;
+    /* border-radius: 7px; */
+    margin: 10px;
+    float: left;
+    width: 90%;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    font-size: 0.7em;
+    font-family: "MerchantCopy";
+    background-color: #fff;
+    color: #1f1f1f;
+    background: linear-gradient(45deg, rgb(206, 206, 206), #fff);
+    /* width: 80%; */
+    padding: 1rem 1rem 2rem;
+    --mask: conic-gradient(
+            from -27.5deg at bottom,
+            #0000,
+            #000 1deg 54deg,
+            #0000 55deg
+        )
+        50%/9.37px 100%;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.reciept-title {
+    width: 90%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.reciept-title h2 {
+    font-family: "Caveat", cursive;
+}
+.reciept-table {
+    width: 90%;
+    margin: 0 0 0.5rem 0;
+}
+.reciept-table thead tr th,
+.reciept-table thead tr td {
+    border: 0;
+    font-weight: bold;
+}
+
+.reciept-table th,
+.reciept-table td {
+    font-weight: normal;
+    text-align: center;
+    padding: 0.25rem 0;
+    width: 100%;
+    border-top: 1px dashed black;
+    white-space: nowrap;
+}
+
+.reciept-table td:last-child,
+.reciept-table th:last-child {
+    text-align: right;
+    margin-left: 0.25em;
+}
+
+.service {
+    border-bottom: 1px solid #000;
+}
+
+@media screen and (max-width: 700px) {
+    .chat-message {
+        width: fit-content;
+    }
+}
+
+/* table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.table-title {
+    padding: 5px;
+    font-size: 0.6em;
+    background: #eee;
+} */

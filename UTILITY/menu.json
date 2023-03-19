@@ -1,0 +1,61 @@
+{
+    "availableFoodItems": [
+        {
+            "id": 1,
+            "item": "Sardin Bread",
+            "price": 2000
+        },
+        {
+            "id": 2,
+            "item": "Grilled Chicken",
+            "price": 10000
+        },
+        {
+            "id": 3,
+            "item": "Fanta",
+            "price": 1000
+        },
+        {
+            "id": 4,
+            "item": "Bottle Water",
+            "price": 1000
+        },
+        {
+            "id": 5,
+            "item": "Rice and Beans",
+            "price": 5000
+        },
+        {
+            "id": 6,
+            "item": "Fruit salad",
+            "price": 1500
+        },
+        {
+            "id": 7,
+            "item": "Afang soup",
+            "price": 5000
+        }
+    ],
+    "menuPrompts": [
+        {
+            "id": 1,
+            "prompt": "Place an order"
+        },
+        {
+            "id": 99,
+            "prompt": "Checkout order"
+        },
+        {
+            "id": 98,
+            "prompt": "See order history"
+        },
+        {
+            "id": 97,
+            "prompt": "See current order"
+        },
+        {
+            "id": 0,
+            "prompt": "Cancel order"
+        }
+    ]
+}
